@@ -1,0 +1,22 @@
+screen carplay-maps-vc Customization
+
+keyValue
+    value String sys 0x00000000 0
+    label "NAR VC settings + album art"
+    poll 0
+
+script
+    value sys 1 0x0100 "/eso/hmi/engdefs/scripts/mqb/cpmap_install_891_vcsettings.sh"
+    label "Install 791/891 NAR"
+
+script
+    value sys 1 0x0100 "/eso/hmi/engdefs/scripts/mqb/cpmap_restore_vcsettings.sh"
+    label "Restore saved setup"
+
+script
+    value sys 1 0x0100 "/eso/hmi/engdefs/scripts/mqb/cpmap_status.sh"
+    label "Show installed version/profile"
+
+script
+    value sys 1 0x0100 "/eso/hmi/engdefs/scripts/mqb/cpmap_dump_logs.sh"
+    label "Dump CarPlay Maps VC logs to SD"
