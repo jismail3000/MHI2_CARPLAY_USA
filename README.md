@@ -28,6 +28,16 @@ or transparency control for the turn card is included.
 
 **Use and install this software entirely at your own risk.** Modifying infotainment software can cause malfunction, data loss, or permanently brick your unit. The original author and contributors to this adapted build accept no responsibility for damage, a bricked unit, or any resulting costs or losses. This software is provided as-is, without warranty. Proceed only if you understand and accept these risks.
 
+## Download
+
+[Download NAR_VW_CarPlay_Maps_VC.zip](NAR_VW_CarPlay_Maps_VC.zip?raw=true)
+
+Extract the ZIP and copy its contents directly to the SD card root. The SD card
+root should contain `Custom`, `Toolbox` and `metainfo2.txt`, rather than an extra
+package folder. Follow the installation steps below.
+
+[Download SHA-256 checksum](NAR_VW_CarPlay_Maps_VC.zip.sha256?raw=true).
+
 ## Installation
 
 The MQB Toolbox and access to the Green Engineering Menu must already be available on the unit.
