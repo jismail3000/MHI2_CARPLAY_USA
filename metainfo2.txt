@@ -53,8 +53,8 @@ FinalScriptMaxTime = "30"
 FinalScriptName = "Final Script"
 
 [Toolbox\final\Dir]
-FileSize = "2622"
-CheckSum = "3B2D9B5727A292C923922293FF7C3EC88D7C3681"
+FileSize = "2607"
+CheckSum = "82F6268E253E5EEBAA8D81302EA687D285346BC2"
 
 [Toolbox]
 VendorInfo = "MQB.Coding"

@@ -3,7 +3,7 @@
 PAYLOAD="$1"
 EXPECTED_MU="$2"
 INSTRUMENT="$3"
-VERSION="US-VCSETTINGS-2.0.1"
+VERSION="US-VCSETTINGS-2.0.1-LagFix1"
 
 fail() {
     echo "CPMAP_INSTALL_FAIL=$1"
@@ -420,6 +420,8 @@ rm -f "$ROOT/cpmap-guard" "$ROOT/cpmap-auth" "$ROOT/cpmap-provision" "$ROOT/intr
 [ -s "$ROOT/core.so" ] || { rollback_commit; fail "CORE_VERIFY_FAILED"; }
 [ -s "$ROOT/stock_first/dio_manager.real" ] || { rollback_commit; fail "STOCK_VERIFY_FAILED"; }
 [ -s "$JARS/CarPlayClusterControls.jar" ] || { rollback_commit; fail "CONTROL_JAR_VERIFY_FAILED"; }
+run_nav_check --same "$BRIDGE" "$ROOT/altscreen-most-bridge" || { rollback_commit; fail "BRIDGE_VERIFY_FAILED"; }
+run_nav_check --same "$SUPERVISOR" "$ROOT/carplay-cluster-supervisor" || { rollback_commit; fail "SUPERVISOR_VERIFY_FAILED"; }
 run_nav_check --same "$NATIVE_ARTWORK_FETCH" "$ROOT/native-artwork-fetch.sh" || { rollback_commit; fail "ARTWORK_FETCH_VERIFY_FAILED"; }
 run_nav_check --same "$ARTWORK_PUBLISH" "$ROOT/cluster-artwork-publish.sh" || { rollback_commit; fail "ARTWORK_PUBLISH_VERIFY_FAILED"; }
 run_nav_check --same "$MENU_JAR" "$JARS/VCMenu.jar" || { rollback_commit; fail "MENU_VERIFY_FAILED"; }
